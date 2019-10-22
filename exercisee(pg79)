@@ -1,0 +1,20 @@
+#include "stdafx.h"
+#include<iostream>
+#include<iomanip>
+using namespace std;
+
+const double LITRE = 0.264179;
+double numofgal_perkilo(float, float);
+int main()
+{
+	float litre, kilo;
+	cout << "enter the litre consume by the car and the number of kilometres travelled by the car";
+	cin >> litre >> kilo;
+
+	cout<<fixed <<setprecision(1)<< numofgal_perkilo(litre, kilo);
+    return 0;
+}
+double numofgal_perkilo(float litre, float kilo) {
+	double galoon = litre * LITRE;
+	return(kilo / galoon);
+}
